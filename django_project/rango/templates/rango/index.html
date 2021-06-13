@@ -5,6 +5,8 @@
 <html>
     <head>
         <title>Rango</title>
+        <link rel="stylesheet" href="{% static "css/base.css" %}" />
+        <script src="{% static "js/jquery.js" %}"></script>
     </head>
     <body>
         <h1>Rango says...</h1>
@@ -15,7 +17,7 @@
         <div>
             <a href="/rango/about/">About</a>
             <img src="{% static 'images/111.jpeg' %}" alt="Picture of monster">
-
+            <img src="{{ MEDIA_URL }}222.jpg" alt="Picture of aCat."/>.
 
         </div>
     </body>
