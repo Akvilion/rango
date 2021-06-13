@@ -1,3 +1,22 @@
-asdsaed
+<!DOCTYPE html>
 
-{{boldmessage}}
+{% load static %}
+
+<html>
+    <head>
+        <title>Rango</title>
+    </head>
+    <body>
+        <h1>Rango says...</h1>
+        <div>
+            hey there partner!<br/>
+            <strong>{{boldmessage}}</strong>
+        </div>
+        <div>
+            <a href="/rango/about/">About</a>
+            <img src="{% static 'images/111.jpeg' %}" alt="Picture of monster">
+
+
+        </div>
+    </body>
+</html>
