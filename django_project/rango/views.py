@@ -8,5 +8,6 @@ def one(request):
 
 
 def about(request):
+    a=1
     context_dict = {'about': 'about'}
     return render(request, 'rango/about.html', context=context_dict)
