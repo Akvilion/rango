@@ -29,6 +29,19 @@
         <strong>There are no categories present.</strong>
     {% endif %}
 
+
+    <div>
+
+    {% for i in most_liked_categories %}
+        <li>
+        <a href="/rango/category/{{ i.slug }}">{{ i.name }} - {{ i.likes }}</a>
+        </li>
+    {% endfor %}
+
+
+
+    </div>
+
     <img src="{% static 'images/111.jpeg' %}" alt="Picture of monster">
     <img src="{{ MEDIA_URL }}222.jpg" alt="Picture of aCat."/>.
 

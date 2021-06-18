@@ -5,13 +5,14 @@ from .models import Category, Page
 def index(request):
     category_list = Category.objects.all()
     context_dict = {}
+    most_liked_categories = Category.objects.filter(likes__gt=1)
     context_dict['boldmessage'] = 'Crunchy, creamy, cookie, candy, cupcake!'
     context_dict['categories'] = category_list
+    context_dict['most_liked_categories'] = most_liked_categories
     return render(request, 'rango/index.html', context=context_dict)
 
 
 def about(request):
-    a=1
     context_dict = {'about': 'about'}
     return render(request, 'rango/about.html', context=context_dict)
 
