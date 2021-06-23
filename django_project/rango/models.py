@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils.text import slugify
+from django.utils.text import slugify  #
 
 
 class Category(models.Model):
@@ -9,7 +9,7 @@ class Category(models.Model):
     likes = models.IntegerField(default=0)
     slug = models.SlugField(unique=True)
 
-    def save(self, *args, **kwargs):
+    def save(self, *args, **kwargs):  # потрібно щоб при збереженні в базу відбувалось збереження slug по name
         self.slug = slugify(self.name)
         super(Category, self).save(*args, **kwargs)
 
