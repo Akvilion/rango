@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import index, about, show_category, add_category, add_page
 
+# app_name = 'rango'
 
 urlpatterns = [
     path('', index, name='index'),
