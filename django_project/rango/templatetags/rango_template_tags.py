@@ -1,5 +1,7 @@
 from django import template
-from ..models import Category
+
+from rango.models import Category
+
 
 register = template.library()
 
